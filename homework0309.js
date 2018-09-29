@@ -4,11 +4,11 @@ fetch('http://api.citybik.es/v2/networks/bicloo').then(function(res) {
     //écriture ici
 for (var i = 0; i < stations.length; i++) {
   console.log(stations[i].name + ' // ' + stations[i].empty_slots + ' // ' + stations[i].free_bikes); //à compléter/revoir);
-
-  var liste = document.querySelector('ul');
-  var currentLi = document.createElement('li');
-  currentLi.textContent = stations[i].empty_slots;
-	liste.appendChild(currentLi)
+	// 
+  // var liste = document.querySelector('ul');
+  // var currentLi = document.createElement('li');
+  // currentLi.textContent = stations[i].empty_slots;
+	// liste.appendChild(currentLi)
 
 }
 for (var i = 0; i < stations.length; i++) {
@@ -18,10 +18,10 @@ for (var i = 0; i < stations.length; i++) {
 	listenoms.appendChild(nomsstations)
 
 
-	var listefree = document.querySelector('free_bikes');
+	var listefree = document.querySelector('ul');
   var currentLifree = document.createElement('li');
   currentLifree.textContent = stations[i].free_bikes + ' // ' + stations[i].empty_slots;
-	liste.appendChild(currentLifree)
+	listefree.appendChild(currentLifree)
 }
     //et là
 	});
