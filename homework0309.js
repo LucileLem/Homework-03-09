@@ -8,7 +8,20 @@ for (var i = 0; i < stations.length; i++) {
   var liste = document.querySelector('ul');
   var currentLi = document.createElement('li');
   currentLi.textContent = stations[i].empty_slots;
-  liste.appendChild(currentLi)
+	liste.appendChild(currentLi)
+
+}
+for (var i = 0; i < stations.length; i++) {
+	var listenoms = document.querySelector('h2');
+	var nomsstations = document.createElement('p');
+	nomsstations.textContent = stations[i].name;
+	listenoms.appendChild(nomsstations)
+
+
+	var listefree = document.querySelector('free_bikes');
+  var currentLifree = document.createElement('li');
+  currentLifree.textContent = stations[i].free_bikes + ' // ' + stations[i].empty_slots;
+	liste.appendChild(currentLifree)
 }
     //et là
 	});
